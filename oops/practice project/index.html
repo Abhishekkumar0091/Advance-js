@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Multi User Chat</title>
+<style>
+    body { font-family: Arial; }
+    .chat { margin-top: 20px; }
+    .msg { padding: 8px; margin: 5px 0; border-radius: 5px; }
+    .user { background: #e0f7fa; }
+    .admin { background: #ffe0b2; font-weight: bold; }
+</style>
+</head>
+<body>
+
+<h2>Chat App</h2>
+
+<select id="userSelect"></select>
+<br><br>
+
+<input type="text" id="message" placeholder="Type message..." />
+<button onclick="sendMessage()">Send</button>
+
+<div class="chat" id="chatBox"></div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+
+body {
+    background: #ece5dd;
+    font-family: Arial;
+}
+
+.app {
+    width: 350px;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.header {
+    background: #075e54;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.chat-area {
+    height: 400px;
+    padding: 10px;
+    overflow-y: auto;
+    background: #e5ddd5;
+}
+
+.chat {
+    display: flex;
+    margin-bottom: 8px;
+}
+
+.user {
+    justify-content: flex-end;
+}
+
+.admin {
+    justify-content: flex-start;
+}
+
+.bubble {
+    max-width: 70%;
+    padding: 8px 10px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.user-bubble {
+    background: #dcf8c6;
+}
+
+.admin-bubble {
+    background: #fff3cd;
+}
+
+.time {
+    font-size: 10px;
+    color: gray;
+    display: block;
+    text-align: right;
+}
+
+.controls {
+    display: flex;
+    gap: 5px;
+    padding: 8px;
+    background: #f0f0f0;
+}
+
+.controls input {
+    flex: 1;
+    padding: 8px;
+}
+
+.controls button {
+    background: #075e54;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.clear {
+    width: 100%;
+    padding: 6px;
+    background: red;
+    color: white;
+    border: none;
+}
+
