@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>User Cards</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen p-8">
+
+  <!-- Cards Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+    <!-- User Card -->
+    <div class="bg-white rounded-xl shadow-lg p-6 text-center">
+      
+      <!-- Profile Image -->
+      <img
+        src="{{picture.large}}"
+        alt="User Image"
+        class="w-24 h-24 mx-auto rounded-full border-4 border-blue-500 mb-4"
+      />
+
+      <!-- Name -->
+      <h2 class="text-xl font-semibold">
+        {{name.title}} {{name.first}} {{name.last}}
+      </h2>
+
+      <!-- Gender -->
+      <p class="text-sm text-gray-500 capitalize">
+        {{gender}}
+      </p>
+
+      <!-- Email -->
+      <p class="text-blue-600 text-sm mt-2 break-all">
+        {{email}}
+      </p>
+
+      <!-- Details -->
+      <div class="mt-4 text-sm text-gray-700 space-y-1">
+        <p>📍 {{location.city}}, {{location.country}}</p>
+        <p>📞 {{phone}}</p>
+        <p>🎂 Age: {{dob.age}}</p>
+        <p>🌍 Nationality: {{nat}}</p>
+      </div>
+
+    </div>
+    <!-- End User Card -->
+
+  </div>
+
+</body>
+</html>
