@@ -5,48 +5,19 @@
   <title>User Cards</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 min-h-screen p-8">
-
-  <!-- Cards Grid -->
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-
-    <!-- User Card -->
-    <div class="bg-white rounded-xl shadow-lg p-6 text-center">
-      
-      <!-- Profile Image -->
-      <img
-        src="{{picture.large}}"
-        alt="User Image"
-        class="w-24 h-24 mx-auto rounded-full border-4 border-blue-500 mb-4"
-      />
-
-      <!-- Name -->
-      <h2 class="text-xl font-semibold">
-        {{name.title}} {{name.first}} {{name.last}}
-      </h2>
-
-      <!-- Gender -->
-      <p class="text-sm text-gray-500 capitalize">
-        {{gender}}
-      </p>
-
-      <!-- Email -->
-      <p class="text-blue-600 text-sm mt-2 break-all">
-        {{email}}
-      </p>
-
-      <!-- Details -->
-      <div class="mt-4 text-sm text-gray-700 space-y-1">
-        <p>📍 {{location.city}}, {{location.country}}</p>
-        <p>📞 {{phone}}</p>
-        <p>🎂 Age: {{dob.age}}</p>
-        <p>🌍 Nationality: {{nat}}</p>
-      </div>
-
-    </div>
-    <!-- End User Card -->
-
+<body class="bg-gray-100 min-h-screen p-6">
+  <!-- Cards Container -->
+  <div
+    id="cards"
+    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+  <!-- Refresh Button -->
+  <div class="text-center mb-6">
+    <button
+      id="btnRefrace"
+      class="px-6 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">
+      Refresh Users
+    </button>
   </div>
-
-</body>
+  <script src="./script.js"></script>
+  </body>
 </html>
