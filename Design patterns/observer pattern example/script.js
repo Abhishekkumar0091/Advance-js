@@ -1,0 +1,40 @@
+class YoutubeChannel 
+{
+    constructor()
+    {
+        this.subscribers = [];
+    }
+    subscribe(user)
+    {
+        this.subscribers.push(user);
+        user.update(`${user.name}, You have subscribed the channel.`);
+    }
+    unsubscribe(user)
+    {
+        this.subscribers = this.subscribers.filter((sub) => sub !== user);
+        user.update(`You have un-subscribed the channel.`);
+    }
+    notify(message)
+    {
+        this.subscribers.forEach((sub) => sub.update(message));
+    }
+}
+class User {
+    constructor(name)
+    {
+        this.name=name;
+    }
+    update(data)
+    {
+        console.log(`${this.name}, ${data}`);  
+    }
+}
+let sheryians = new YoutubeChannel();
+let user1 = new User("Abhishek");
+let user2 = new User("Rohit")
+
+sheryians.subscribe(user1);
+sheryians.subscribe(user2);
+sheryians.notify("we are closing the channel, becous it's april 1st");
+sheryians.notify("new video uploded")
+sheryians.unsubscribe(user1);
